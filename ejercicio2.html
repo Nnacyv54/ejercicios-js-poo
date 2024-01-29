@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Ej arreglo: [“unacadena”,3,9,1,10,500,1,10,true]
+    function ordenarArregloDescendente(arreglo) {
+    let resultado = [];
+    if (!arreglo || !Array.isArray(arreglo)) {
+        console.log('ingrese un arreglo de prueba por favor');
+        return;
+    }
+    for(let i=0;i<arreglo.length;i++) {
+        if (typeof arreglo[i] === 'number') {
+            resultado.push(arreglo[i]);
+        }
+    }
+    if (resultado.length > 0) {
+        for (let i = 0; i < resultado.length - 1; i++) {
+            for (let j = 0; j < resultado.length - 1 - i; j++) {
+              // Compara elementos adyacentes y los intercambia si están en el orden incorrecto
+              if (resultado[j] < resultado[j + 1]) {
+                // Intercambio de elementos
+                let temp = resultado[j];
+                resultado[j] = resultado[j + 1];
+                resultado[j + 1] = temp;
+              }
+    }
+  }
+    }
+    return resultado;
+}
+console.log(ordenarArregloDescendente(['unacadena',3,9,1,10,500,1,10,true]));
+    </script>
+</body>
+</html>
