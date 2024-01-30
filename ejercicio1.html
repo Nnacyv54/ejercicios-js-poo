@@ -3,33 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Serie fibonacci</title>
 </head>
 <body>
-    <script>
-        //usando el bucle for
-        function fibonacci1(numero) {
-    if (numero < 0) {
-        console.log('no se aceptan numeros negativos');
-    }
-    if (numero <= 1) {
-        return numero;
-    }
-    let anterior = 0;
-    let actual = 1;
-    let cadena = '0,1';
-    // siguiente = actual + anterior;
-    for (let contador = 2;contador <= numero;contador++) {
-        let siguiente = anterior + actual;
-        anterior = actual;
-        actual = siguiente;
-        cadena = cadena.concat(',').concat(actual);
-    }
-    return cadena;
-}
-let resultado = prompt('ingrese el numero');
-console.log('fib1: ' + fibonacci1(7));
-
-    </script>
+    <script src="script1.js"></script>
 </body>
 </html>
